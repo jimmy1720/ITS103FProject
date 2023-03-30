@@ -6,7 +6,7 @@
 <title>Java Quiz</title>
 </head>
 <ul>
-<li><a href = "index.html">Home</a></li>
+<li><a href = "main.html">Home</a></li>
 <li>
 <a href = "#"> Java</a>
 <ul class = "dropdown">
@@ -23,9 +23,76 @@
 <li><a href = "python_quiz.html">Quiz</a></li>
 </ul>
 </li>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 
+<script>
+//Define question and answer in array format
+var questionSet = ["123","456","789","12342","3249i49","29391"];
+var answerSet = ["A","B","C","D","E","F"]
+var questionNo = 1;
+var correctCount = 0;
+
+//An array to store the model answers of the questionSet
+var answerSet2 = [];
+function showQuestion(){
+	for(var i = 5;i>=1;i--){
+	  var randomNumber = Math.floor(Math.random() * i);
+	  answerSet2.push(answerSet[randomNumber]);
+	  document.write("Question " + questionNo + ":" + questionSet[randomNumber]+ "<br><br><br>" );
+	  
+
+	  
+	  questionNo++;
+	  //Remove the question and answers that selected by randomNumber
+	  questionSet.splice(randomNumber,1);
+	  answerSet.splice(randomNumber,1);
+	  document.write(answerSet2);
+	}
+}
+function countAnswer(){
+	var usersInput = document.getElementById("q1");
+	for(var i = 1;i<=5;i++){
+	//Check if user's input == the answer, correctCount + 1
+	alert(usersInput);
+	if(usersInput == answerSet2[questionNo]){
+		correctCount += 1;
+		alert("Question" + i + " correct!");
+	  }else{
+		alert("Wrong answer for question "+ i);
+	  }
+	}
+}
+showQuestion();
+</script>
 <body bgcolor = "#22438C">
 <br><br><br><br><br><br>
+Input your answer here<br><br>
+<table>
+<tr>
+<td>Question 1</td>
+<td><input type = "text" id = "q1" value = "A"></td>
+</tr>
+<tr>
+<td>Question 2</td>
+<td><input type = "text" id = "q2"></td>
+</tr>
+<tr>
+<td>Question 3</td>
+<td><input type = "text" id = "q3"></td>
+</tr>
+<tr>
+<td>Question 4</td>
+<td><input type = "text" id = "q4"></td>
+</tr>
+<tr>
+<td>Question 5</td>
+<td><input type = "text" id = "q5"></td>
+</tr>
+<tr>
+<td>Submit your answers</td>
+<td><input width = "100%" type = "button" value = "Sumbit" onClick = "countAnswer()"></td>
+</tr>
+</table>
 </body>
 
 
