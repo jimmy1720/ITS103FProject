@@ -27,8 +27,10 @@
 
 <script>
 //Define question and answer in array format
-var questionSet = ["123","456","789","12342","3249i49","29391"];
-var answerSet = ["A","B","C","D","E","F"]
+var questionSet = ["Which datatype cannot use double column when creating variables?",
+				  "What is output in the following code<br><br>public class Person {<br><br>&nbsp&nbsp public String name = \"Susan\"<br><br>public Person(){<br><br>&nbsp&nbsp this.name = name;<br>}<br><br>public void setName(String newName) {<br>&nbsp&nbsp this.name = newName;<br>}<br><br>public static void main(String[] args){<br>&nbsp&nbsp Person p1 = new Person();<br>&nbsp&nbsp p1.setName(\"Derek\");<br>&nbsp&nbsp p1.setName(\"Zoo\");<br>&nbsp&nbsp System.out.println(p1.name);<br>}<br>}",
+				  "789","12342","3249i49","29391"];
+var answerSet = ["int","Zoo","C","D","E","F"]
 var questionNo = 1;
 var correctCount = 0;
 
@@ -50,15 +52,14 @@ function showQuestion(){
 function countAnswer(){
 	for(var i = 1;i<=5;i++){
 	const usersInput = document.getElementById("q"+i).value;
-	alert("Your Answer: " +usersInput)
 	//Check if user's input == the answer, if yes then correctCount + 1
 	if(usersInput == answerSet2[i-1]){
 		correctCount += 1;
-		alert("Question" + i + " correct!");
 	  }else{
 		alert("Wrong answer for question "+ i);
 	  }
 	}
+	alert("Total correct questions = " +correctCount);
 }
 showQuestion();
 </script>
