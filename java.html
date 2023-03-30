@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="menu.css">
+  <meta charset="utf-8">
+<title>Java</title>
+</head>
+<ul>
+<li><a href = "index.html">Home</a></li>
+<li>
+<a href = "#"> Java</a>
+<ul class = "dropdown">
+<li><a href = "java.html">Tutorial</a></li>
+<li><a href = "java_quiz.html">Quiz</a></li>
+
+</ul>
+</li>
+
+<li>
+<a href = "#"> Python</a>
+<ul class = "dropdown">
+<li><a href = "python.html">Tutorial</a></li>
+<li><a href = "python_quiz.html">Quiz</a></li>
+</ul>
+</li>
+
+<script>
+var surname = "Chan "
+var firstname = "Tai Man"
+var showStringOutput =　StringOutput;
+
+function StringOutput(){
+	alert("First line output: "+surname);
+	alert("Second line output: "+firstname);
+	alert("Third line output: "+(surname + firstname));
+}
+</script>
+<body bgcolor = "#22438C">
+<br><br><br><br><br><br>
+<h1>Java Variable</h1><br><br><br><br><br><br>
+<h2>In Java, there are different types of variables, for example:</h2><br>
+<b><p style ="color:yellow;">1. String - stores text, such as "Hello". String values are surrounded by double quotes<br><br></p>
+<p style ="color:green;">2. int - stores integers (whole numbers), without decimals, such as 123 or -123<br><br></p>
+<p style ="color:red;">3. float - stores floating point numbers, with decimals, such as 19.99 or -19.99<br><br></p>
+<p style ="color:orange;">4. char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes<br><br></p>
+<p style ="color:purple">5. boolean - stores values with two states: true or false</p>
+<br><br><br>
+<p style = "color:yellow">Example:<br>
+String surname = "Chan";<br>
+String firstname = "Tai Man";<br>
+System.out.println(surname);<br>
+System.out.println(firstname);<br>
+System.out.println(surname + firstname);
+<br><br><br><input type ="button" id = "variable" value = "Click the button" onclick = "showStringOutput()">and the alert message will show you the sample output
+
+<br><br><br> 	
+<p>P.S. Those description of variable are referenced by W3School</p></b>
+</body>    
+</html>
