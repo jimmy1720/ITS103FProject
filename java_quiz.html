@@ -35,26 +35,24 @@ var correctCount = 0;
 //An array to store the model answers of the questionSet
 var answerSet2 = [];
 function showQuestion(){
+	//Random from max to min number by using for loop
 	for(var i = 5;i>=1;i--){
 	  var randomNumber = Math.floor(Math.random() * i);
 	  answerSet2.push(answerSet[randomNumber]);
 	  document.write("Question " + questionNo + ":" + questionSet[randomNumber]+ "<br><br><br>" );
-	  
-
-	  
 	  questionNo++;
 	  //Remove the question and answers that selected by randomNumber
 	  questionSet.splice(randomNumber,1);
 	  answerSet.splice(randomNumber,1);
-	  document.write(answerSet2);
 	}
+	document.write(answerSet2)
 }
 function countAnswer(){
-	var usersInput = document.getElementById("q1");
 	for(var i = 1;i<=5;i++){
-	//Check if user's input == the answer, correctCount + 1
-	alert(usersInput);
-	if(usersInput == answerSet2[questionNo]){
+	const usersInput = document.getElementById("q"+i).value;
+	alert("Your Answer: " +usersInput)
+	//Check if user's input == the answer, if yes then correctCount + 1
+	if(usersInput == answerSet2[i-1]){
 		correctCount += 1;
 		alert("Question" + i + " correct!");
 	  }else{
@@ -70,31 +68,28 @@ Input your answer here<br><br>
 <table>
 <tr>
 <td>Question 1</td>
-<td><input type = "text" id = "q1" value = "A"></td>
+<td><input type = "text" id = "q1" autocomplete='off'></td>
 </tr>
 <tr>
 <td>Question 2</td>
-<td><input type = "text" id = "q2"></td>
+<td><input type = "text" id = "q2" autocomplete='off'></td>
 </tr>
 <tr>
 <td>Question 3</td>
-<td><input type = "text" id = "q3"></td>
+<td><input type = "text" id = "q3" autocomplete='off'></td>
 </tr>
 <tr>
 <td>Question 4</td>
-<td><input type = "text" id = "q4"></td>
+<td><input type = "text" id = "q4" autocomplete='off'></td>
 </tr>
 <tr>
 <td>Question 5</td>
-<td><input type = "text" id = "q5"></td>
+<td><input type = "text" id = "q5" autocomplete='off'></td>
 </tr>
 <tr>
 <td>Submit your answers</td>
-<td><input width = "100%" type = "button" value = "Sumbit" onClick = "countAnswer()"></td>
+<td><input type = "button" value = "Submit" onClick = "countAnswer()"></td>
 </tr>
 </table>
 </body>
-
-
-
 </html>
