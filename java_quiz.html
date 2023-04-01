@@ -23,18 +23,23 @@
 <li><a href = "python_quiz.html">Quiz</a></li>
 </ul>
 </li>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-
+<br><br><br><br><br>
+<style>
+button {
+     width:1000px
+}
+</style>
 <script>
 //Define question and answer in array format
-var questionSet = ["Which datatype cannot use double column when creating variables?",
-				  "What is output in the following code<br><br>public class Person {<br><br>&nbsp&nbsp public String name = \"Susan\"<br><br>public Person(){<br><br>&nbsp&nbsp this.name = name;<br>}<br><br>public void setName(String newName) {<br>&nbsp&nbsp this.name = newName;<br>}<br><br>public static void main(String[] args){<br>&nbsp&nbsp Person p1 = new Person();<br>&nbsp&nbsp p1.setName(\"Derek\");<br>&nbsp&nbsp p1.setName(\"Zoo\");<br>&nbsp&nbsp System.out.println(p1.name);<br>}<br>}",
-				  "789","12342","3249i49","29391"];
-var answerSet = ["int","Zoo","C","D","E","F"]
+var questionSet = ["Which datatype is using single colon to create variable?",
+				  "What is the output in the following code<br><br>public class Person {<br><br>&nbsp&nbsp public String name = \"Susan\"<br><br>public Person(){<br><br>&nbsp&nbsp this.name = name;<br>}<br><br>public void setName(String newName) {<br>&nbsp&nbsp this.name = newName;<br>}<br><br>public static void main(String[] args){<br>&nbsp&nbsp Person p1 = new Person();<br>&nbsp&nbsp p1.setName(\"Derek\");<br>&nbsp&nbsp p1.setName(\"Zoo\");<br>&nbsp&nbsp System.out.println(p1.name);<br>}<br>}",
+				  "Write the import statement for scanner",
+				  "Will the following method result in a syntax error?(Answer T for true and F for false)<br>&nbsp&nbsp public void aMethod();",
+				  "Create a varaible called age and assign 20",
+				  "How many elements can "];
+var answerSet = ["char","Zoo","import java.util.Scanner;","T","int age = 20;","F"]
 var questionNo = 1;
-var correctCount = 0;
-
-//An array to store the model answers of the questionSet
+//An array to store the answers of the surffled questionSet
 var answerSet2 = [];
 function showQuestion(){
 	//Random from max to min number by using for loop
@@ -47,26 +52,30 @@ function showQuestion(){
 	  questionSet.splice(randomNumber,1);
 	  answerSet.splice(randomNumber,1);
 	}
-	document.write(answerSet2)
 }
 function countAnswer(){
+    var correctCount = 0;
 	for(var i = 1;i<=5;i++){
 	const usersInput = document.getElementById("q"+i).value;
 	//Check if user's input == the answer, if yes then correctCount + 1
 	if(usersInput == answerSet2[i-1]){
 		correctCount += 1;
-	  }else{
-		alert("Wrong answer for question "+ i);
 	  }
 	}
-	alert("Total correct questions = " +correctCount);
+	alert("You have answered " +correctCount + " correctly");
 }
+
+function showAnswer(){
+	for(var i = 1; i <= 5; i++){
+		alert("Question "+ i + "answer: " +answerSet2[i-1]);
+	}
+};
 showQuestion();
 </script>
-<body bgcolor = "#22438C">
+<body style = "font-size:15px">
 <br><br><br><br><br><br>
-Input your answer here<br><br>
-<table>
+Input your answer here<b style= "font-size:20px">(Check the answer by clicking the caution image)</b><br><br>
+<table border = "1">
 <tr>
 <td>Question 1</td>
 <td><input type = "text" id = "q1" autocomplete='off'></td>
@@ -89,7 +98,11 @@ Input your answer here<br><br>
 </tr>
 <tr>
 <td>Submit your answers</td>
-<td><input type = "button" value = "Submit" onClick = "countAnswer()"></td>
+<td><input type = "button" width = "100%" value = "Submit" onClick = "countAnswer()"></td>
+</tr>
+<tr>
+<td colspan = "2"><img src = "caution.png" onClick = "showAnswer()" width = "100%"></td>
+
 </tr>
 </table>
 </body>

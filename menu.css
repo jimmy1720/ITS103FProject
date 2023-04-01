@@ -5,7 +5,7 @@ font-family: monospace;
 }
 ul {
 list-style: none;
-background: #22438C;
+background: #b1b1b1;
 }
 ul li {
 display: inline-block;
@@ -24,7 +24,7 @@ display: block;
 }
 ul li ul.dropdown {
 width: 100%;
-background: #22438C;
+background: #b1b1b1;
 position: absolute;
 z-index: 999;
 display: none;
@@ -40,13 +40,12 @@ h1 {
     width:500px;
     margin: 0 auto;
     text-align: center;
-	color:white;
+	color:black;
 }
 
 h2{
-    width:400px;
-    margin: 0 auto;
-	color:white;
+    text-align:center;
+	color:black;
 }
 
 
