@@ -36,24 +36,6 @@ ul li:hover ul.dropdown {
 display: block;
 }
 
-h1 {
-    width:500px;
-    margin: 0 auto;
-    text-align: center;
-	color:black;
-}
-
-h2{
-    text-align:center;
-	color:black;
-}
-
-
-p{
-	width:350px;
-	margin: 0 auto;
-}
-
 button {
   background-color: #e7e7e7; color: black;
   border: none;

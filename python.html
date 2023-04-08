@@ -1,34 +1,197 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <html lang="en">
 <head>
   <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="python.css">
   <meta charset="utf-8">
 <title>Python</title>
 </head>
 <ul>
-<li><a href = "main.html">Home</a></li>
-<li>
-<a href = "#"> Java</a>
-<ul class = "dropdown">
-<li><a href = "java.html">Tutorial</a></li>
-<li><a href = "java_quiz.html">Quiz</a></li>
+  <li><a href = "main.html">Home</a></li>
+  <li>
+    <a href = "#"> Java</a>
+    <ul class = "dropdown">
+      <li><a href = "java.html">Tutorial</a></li>
+      <li><a href = "java_quiz.html">Quiz</a></li>
 
+    </ul>
+  </li>
+  <li>
+    <a href = "#"> Python</a>
+    <ul class = "dropdown">
+      <li><a href = "python.html">Tutorial</a></li>
+      <li><a href = "python_quiz.html">Quiz</a></li>
+    </ul>
+  </li>
 </ul>
-</li>
+<script>
+function toggle(element){
+  document.getElementById(element).classList.toggle("show");
+}
+function try01a(){
+  var checkBox = document.getElementById("try01a-chkbox");
+  if (checkBox.checked == true) {
+    document.getElementById("try01a-line2").innerHTML = "print(\"Hello World!\")";
+    document.getElementById("try01a-result").innerHTML = "Syntax Error";
+  }
+  else{
+    document.getElementById("try01a-line2").innerHTML = "&nbsp;&nbsp;print(\"Hello World!\")";
+    document.getElementById("try01a-result").innerHTML = "Hello World!";
+  }
+}
+function try01b(){
+  var checkBox = document.getElementById("try01b-chkbox");
+  if (checkBox.checked == true) {
+    document.getElementById("try01b-line3").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;print(\"Learning Python is fun!\")";
+    document.getElementById("try01b-result1").innerHTML = "<li>Syntax Error</li>";
+    document.getElementById("try01b-result2").style.display = "none";
+  }
+  else{
+    document.getElementById("try01b-line3").innerHTML = "&nbsp;&nbsp;print(\"Learning Python is fun!\")";
+    document.getElementById("try01b-result1").innerHTML = "<li>Hello World!</li>";
+    document.getElementById("try01b-result2").style.display = "inline-block";
+  }
+}
+function try02(){
 
-<li>
-<a href = "#"> Python</a>
-<ul class = "dropdown">
-<li><a href = "python.html">Tutorial</a></li>
-<li><a href = "python_quiz.html">Quiz</a></li>
-</ul>
-</li>
-
+}
+</script>
 <body bgcolor = "#b1b1b1">
-<br><br><br><br><br><br>
+  <div class="container">
+    <h1>Python Tutorial</h1><br>
+
+    <div class = "highlight-yellow">
+      <h2>Part 1 Python Syntax</h1><br>
+      <p>Similar to many other programming languages, there are some syntax in Python that must be followed.</p>
+      <p>For part 1, we will learn about indentations and how to declare a variable in Python.</p>
+    </div>
+    
+    <br><h2>1.1 Indentation</h2><br>
+    <p>
+      Python uses <b style="color: #C70039 ">indentation</b> to indicate a block of code. <br>
+      If proper indentation is not added, it will result in a syntax error.
+    </p><br>
+    <div class="highlight-blue">
+      <h2>Examples</h2><br>
+      <p>The following code prints "Hello World" if 2 is larger than 1, which is obviously true:</p><br>
+      <div class="code-box">
+        <ul>
+          <li class="lineNo">1</li>
+          <li>if 2 > 1:</li>
+        </ul>
+        <ul>
+          <li class="lineNo">2</li>
+          <li>&nbsp;&nbsp;print("Hello World!")</li>
+        </ul>
+      </div>
+      <br><p>The following would result in a syntax error because it doesn't contain proper indentation:</p><br>
+      <div class="code-box">
+        <ul>
+          <li class="lineNo">1</li>
+          <li>if 2 > 1:</li>
+        </ul>
+        <ul>
+          <li class="lineNo">2</li>
+          <li>print("Hello World!")</li>
+        </ul>
+      </div>
+      <br><button class="trybtn" type="button" onclick="toggle('try-01')">Try it!</button>
+    </div><br>
+    <div class="highlight-blue" id="try-01">
+      <H2>Try it!</H2><br>
+      <!--Try 01a-->
+      <p>1. Try the one from the previous example</p><br>
+      <div class="code-box">
+        <ul>
+          <li class="lineNo">1</li>
+          <li id="try01a-line1">if 2 > 1:</li>
+        </ul>
+        <ul>
+          <li class="lineNo">2</li>
+          <li id="try01a-line2">&nbsp;&nbsp;print("Hello World!")</li>
+        </ul>
+      </div>
+      <br>
+      <input type="checkbox" id="try01a-chkbox" onclick="try01a()">
+      <label for="try01a-chkbox"> Remove Indentation on Second Line</label><br>
+      <br>
+      <p>Result:</p><br>
+      <div class="code-box">
+        <ul>
+          <li id="try01a-result" style="padding-left:10px">Hello World!</li>
+        </ul>
+      </div>
+      <!--Try 01b-->
+      <br><p>2. Now with two lines...? And try adding indentation on one of them?</p><br>
+      <div class="code-box">
+        <ul>
+          <li class="lineNo">1</li>
+          <li id="try01b-line1">if 2 > 1:</li>
+        </ul>
+        <ul>
+          <li class="lineNo">2</li>
+          <li id="try01b-line2">&nbsp;&nbsp;print("Hello World!")</li>
+        </ul>
+        <ul>
+          <li class="lineNo">3</li>
+          <li id="try01b-line3">&nbsp;&nbsp;print("Learning Python is fun!")</li>
+        </ul>
+      </div><br>
+      <input type="checkbox" id="try01b-chkbox" onclick="try01b()">
+      <label for="try01b-chkbox"> Add Indentation on Second Line</label><br>
+      <br>
+      <p>Result:</p><br>
+      <div class="code-box" style="padding-left:10px">
+        <ul id="try01b-result1"><li>Hello World!</li></ul>
+        <ul id="try01b-result2"><li>Learning Python is fun!</li></ul>
+      </div>
+      <br><p style="opacity:50%">(Hint: You can also try these on your own PC.)</p>
+    </div>
+    
+    <script>
+      document.getElementById("try01a-chkbox").checked = false;
+      document.getElementById("try01b-chkbox").checked = false;
+    </script>
+    
+    
+    <br><h2>1.2 Variables</h2><br>
+    <p>You can create a variable in Python by simply assigning a variable to it.<br>
+    Unlike many other programming languages, <b style="color: #C70039 ">no</b> declaration of variable type is needed.</p><br>
+    
+    <div class="highlight-blue">
+      <h2>Examples</h2><br>
+      <p>The following code creates two variables, which are assigned integer 5 and string "Hello World!" respectively.</p><br>
+      <div class="code-box">
+        <ul>
+          <li class="lineNo">1</li>
+          <li id="try01a-line1">x = 5</li>
+        </ul>
+        <ul>
+          <li class="lineNo">2</li>
+          <li id="try01a-line2">y = "Hello World!"</li>
+        </ul>
+      </div><br>
+      <p>You can simply call the variable names when using them:</p><br>
+      <div class="code-box">
+        <ul>
+          <li class="lineNo">3</li>
+          <li id="try01a-line1">x = x + 5 <b style="color:grey"># Adds 5 to x ( The result is 10 )</b></li>
+        </ul>
+        <ul>
+          <li class="lineNo">4</li>
+          <li id="try01a-line2">print(y) <b style="color:grey"># Prints "Hello World!"</b></li>
+        </ul>
+      </div>
+      <br><button class="trybtn" type="button" onclick="toggle('try-02')">Try it!</button>
+    </div><br>
+    <div class="highlight-blue" id="try-02">
+    </div>
+
+    <br><p>End of Part 1.</p><br><br>
+  </div>
 
 </body>
-
 
 
 </html>
