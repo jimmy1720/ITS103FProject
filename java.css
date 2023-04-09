@@ -12,6 +12,40 @@ h2{
 
 
 p{
-	width:350px;
 	margin: 0 auto;
+	white-space: normal;
+	text-align:center;
+}
+
+#java {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#java td, #java th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#java tr:nth-child(even){background-color: #f2f2f2;}
+
+#java tr:hover {background-color: #ddd;}
+
+#java th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+div {
+  width: 320px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
 }

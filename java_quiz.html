@@ -47,7 +47,7 @@ function showQuestion(){
 	for(var i = 5;i>=1;i--){
 	  var randomNumber = Math.floor(Math.random() * i);
 	  answerSet2.push(answerSet[randomNumber]);
-	  document.write("Question " + questionNo + ":" + questionSet[randomNumber]+ "<br><br><br>" );
+	  document.write("Question " + questionNo + ":" + questionSet[randomNumber]+ "<br><br><br><br><br><br>" );
 	  questionNo++;
 	  //Remove the question and answers that selected by randomNumber
 	  questionSet.splice(randomNumber,1);
@@ -68,7 +68,7 @@ function countAnswer(){
 
 function showAnswer(){
 	for(var i = 1; i <= 5; i++){
-		alert("Question "+ i + "answer: " +answerSet2[i-1]);
+		alert("Question "+ i + " answer: " +answerSet2[i-1]);
 	}
 };
 showQuestion();

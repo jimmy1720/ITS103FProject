@@ -25,9 +25,19 @@
 </ul>
 </li>
 <style>
-p{
-font-size:20px;
+.button {
+  background-color: White;
+  border: none;
+  color: black;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
+
 </style>
 <script>
 var surname = "Chan "
@@ -40,25 +50,60 @@ function StringOutput(){
 	alert("Third line output: "+(surname + firstname));
 }
 </script>
-<body bgcolor = "#22438C">
+<body  bgcolor = "#b1b1b1">
 <br><br><br><br><br><br>
 <h1>Part 1. Java Variable</h1><br><br><br><br><br><br>
-<h2>In Java, there are different types of variables, for example:</h2><br>
-<b><p style ="color:yellow;">1. String - stores text, such as "Hello". String values are surrounded by double quotes<br><br></p>
-<p style ="color:yellow;">2. int - stores integers (whole numbers), without decimals, such as 123 or -123<br><br></p>
-<p style ="color:yellow;">3. float - stores floating point numbers, with decimals, such as 19.99 or -19.99<br><br></p>
-<p style ="color:yellow;">4. char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes<br><br></p>
-<p style ="color:yellow">5. boolean - stores values with two states: true or false</p>
-<br><br><br>
-<p style = "color:green">Example:<br>
+<h2>In Java, there are different types of variables</h2><br>
+<table id = "java">
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>String</td>
+<td>Stores text, such as "Hello". String values are surrounded by double quotes</td>
+</tr>
+<tr>
+<td>Integers</td>
+<td>Stores integers (whole numbers), without decimals, such as 123 or -123</td>
+</tr>
+<tr>
+<td>Float</td>
+<td>Stores floating point numbers, with decimals, such as 19.99 or -19.99</td>
+</tr>
+<tr>
+<td>Char</td>
+<td>Stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes</td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>Stores values with two states: true or false</td>
+</tr>
+</table>
+<br><br>
+<p>There is one of the example of how to printing your name in String format</p><br>
+<div>
 String surname = "Chan";<br>
 String firstname = "Tai Man";<br>
 System.out.println(surname);<br>
 System.out.println(firstname);<br>
 System.out.println(surname + firstname);
-<br><br><br><input type ="button" id = "variable" value = "Click the button" onclick = "showStringOutput()">and the alert message will show you the sample output
-<br><br><br>Same with integers but remember we don't use double quotes on it otherwise its an incompatible types due to String cannot be converted to int!!!
-<br><br><br> 	
-<p>P.S. Those description of variable are referenced by W3School</p></b>
+</div>
+<br><br><br><p><button class = "button" onclick = "showStringOutput()">Click the button</button>and the alert message will show you the sample output</p>
+<br><br><br><p>Same with integers but remember we don't use <b>double quotes</b> on it otherwise its an incompatible types due to <b>String cannot be converted to int</b></p>
+ 	
+
+
+
+<hr><br>
+<h1>Part 2 Logical operator</h1><br>
+<p>A logical operator is a symbol or word used to connect two or more expressions such that the value of the compound expression produced depends only on that of the original expressions and on the meaning of the operator. <br>Common logical operators include AND, OR, and NOT.</p>
+
+
+<p style = "position: center;
+  bottom: 10px;
+  border: 3px solid black;
+  "><b>P.S. Some descriptions are referenced by W3School</b></p>
 </body>    
+
 </html>
