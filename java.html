@@ -50,10 +50,6 @@ function StringOutput(){
 	alert("Third line output: "+(surname + firstname));
 }
 
-function showOutput(){
-	answer = docuement.getElementById("ans1")
-	answer.removeAttribute("hidden"); 
-}
 </script>
 <body  bgcolor = "#b1b1b1">
 <br><br><br><br><br><br>
@@ -104,7 +100,7 @@ System.out.println(surname + firstname);
 <h1>Part 2. Logical operator</h1><br>
 <p>A logical operator is a symbol or word used to connect two or more expressions such that the value of the compound expression produced depends only on that of the original expressions and on the meaning of the operator. 
 <br><br>Common logical operators include <b>AND, OR, and NOT.</b></p>
-<br><br><p>There is one common way to show logical relationships is shown as Truth Tables. (Try to guess the answer and you can check it by clicking the button)</p>
+<br><br><p>There is one common way to show logical relationships is shown as Truth Tables</p>
 
 <table style = "width:50%" id = "java">
 <tr>
@@ -117,22 +113,22 @@ System.out.println(surname + firstname);
 <tr>
 <td>false</td>
 <td>false</td>
-<td><p id = "ans1" onmouseenter = "showOutput() " hidden>false</td>
+<td><p id = "ans1" onclick = "document.getElementById('ans1').innerHTML='false';">Check answer</p></td>
 </tr>
 <tr>
 <td>false</td>
 <td>true</td>
-<td>false</td>
+<td><p id = "ans2" onclick = "document.getElementById('ans2').innerHTML='false';">Check answer</p></td>
 </tr>
 <tr>
 <td>true</td>
 <td>false</td>
-<td>false</td>
+<td><p id = "ans3" onclick = "document.getElementById('ans3').innerHTML='false';">Check answer</p></td>
 </tr>
 <tr>
 <td>true</td>
 <td>true</td>
-<td><b>true</b></td>
+<td><p id = "ans4" onclick = "document.getElementById('ans4').innerHTML='true';">Check answer</p></td>
 </tr>
 </table>
 
@@ -149,22 +145,22 @@ System.out.println(surname + firstname);
 <tr>
 <td>false</td>
 <td>false</td>
-<td>false</td>
+<td><p id = "ans5" onclick = "document.getElementById('ans5').innerHTML='false';">Check answer</p></td>
 </tr>
 <tr>
 <td>false</td>
 <td>true</td>
-<td><b>true</b></td>
+<td><p id = "ans6" onclick = "document.getElementById('ans6').innerHTML='true';">Check answer</p></td>
 </tr>
 <tr>
 <td>true</td>
 <td>false</td>
-<td><b>true</b></td>
+<td><p id = "ans7" onclick = "document.getElementById('ans7').innerHTML='true';">Check answer</p></td>
 </tr>
 <tr>
 <td>true</td>
 <td>true</td>
-<td><b>true</b></td>
+<td><p id = "ans8" onclick = "document.getElementById('ans8').innerHTML='true';">Check answer</p></td>
 </tr>
 </table>
 
@@ -180,11 +176,11 @@ System.out.println(surname + firstname);
 </tr>
 <tr>
 <td>false</td>
-<td>true</td>
+<td><p id = "ans9" onclick = "document.getElementById('ans9').innerHTML='true';">Check answer</p></td>
 </tr>
 <tr>
 <td>true</td>
-<td>false</td>
+<td><p id = "ans10" onclick = "document.getElementById('ans10').innerHTML='false';">Check answer</p></td>
 </tr>
 </table>
 
