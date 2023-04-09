@@ -49,6 +49,11 @@ function StringOutput(){
 	alert("Second line output: "+firstname);
 	alert("Third line output: "+(surname + firstname));
 }
+
+function showOutput(){
+	answer = docuement.getElementById("ans1")
+	answer.removeAttribute("hidden"); 
+}
 </script>
 <body  bgcolor = "#b1b1b1">
 <br><br><br><br><br><br>
@@ -112,7 +117,7 @@ System.out.println(surname + firstname);
 <tr>
 <td>false</td>
 <td>false</td>
-<td>false</td>
+<td><p id = "ans1" onmouseenter = "showOutput() " hidden>false</td>
 </tr>
 <tr>
 <td>false</td>
