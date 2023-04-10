@@ -114,7 +114,7 @@ System.out.println(surname + firstname);
 <h1>Part 2. Logical operator</h1><br><br>
 <p>A logical operator is a symbol or word used to connect two or more expressions such that the value of the compound expression produced depends only on that of the original expressions and on the meaning of the operator. 
 <br><br>Common logical operators include <b style = "color:red">AND, OR, and NOT.</b></p>
-<br><br><p>There is one common way to show logical relationships is shown as Truth Tables</p>
+<br><br><p>There is one common way to show logical relationships is shown as Truth Tables</p><br><br>
 
 <table style = "width:50%" id = "java">
 <tr>
@@ -240,15 +240,45 @@ public static void main(String[] args){<br>
 
 <br><br><hr><br><br>
 
-<h1>Part 4. Getter and Setter</h1>
+<h1>Part 4. Getter and Setter</h1><br><br>
 
+<p>The get method returns the variable value, and the set method sets the value.</p><br><br>
 
+<p>Syntax for both is that they start with either get or set, followed by the name of the variable, with the first letter in <b style = "color:red">upper case</b>:</p><br><br>
 
+<br><br><h2>How to create getter and setter method</h2><br><br>
+
+<div>
+public class Person {<br><br>
+&nbsp;private String name;<br><br>
+&nbsp;<b style = "color:grey"> //Getter</b><br>
+&nbsp;&nbsp;public String getName() {<br><br>
+&nbsp;&nbsp;&nbsp;return name;<br>
+}<br><br><br>
+&nbsp;&nbsp;<b style = "color:grey">// Setter</b><br>
+&nbsp;&nbsp;public void setName(String newName) {<br><br>
+&nbsp;&nbsp;&nbsp;this.name = newName;<br>
+&nbsp;&nbsp;}<br>
+}
+</div>
+
+<br><br><br><br><h2>Example of using "setName" and "getName" </h2><br><br><br><br>
+
+<div>
+public class Main {<br><br>
+&nbsp;public static void main(String[] args) {<br><br>
+&nbsp;&nbsp;Person myObj = new Person();<br><br>
+&nbsp;&nbsp;myObj.setName("John"); // Set the value of the name variable to "John"<br><br>
+&nbsp;&nbsp;System.out.println(myObj.getName());<br><br>
+&nbsp;&nbsp;}<br>
+}
 <br><br>
+</div>
+<br><br><br><br>
 <p style = "position: center;
   bottom: 10px;
   border: 3px solid black;
-  "><b>P.S. Some descriptions are referenced by W3School</b>
+  "><b>P.S. Some descriptions are referenced by W3School</b></p>
 </body>    
 
 
