@@ -201,11 +201,11 @@ function try02(){
       <div class="code-box">
         <ul>
           <li class="lineNo">1</li>
-          <li id="try02-line1"><input type="text" id="try02-input1" size="1" class="input-box"> = 5</li>
+          <li id="try02-line1"><input type="text" id="try02-input1" size="1" class="input-box"><label for="try02-input1"> = 5</label></li>
         </ul>
         <ul>
           <li class="lineNo">2</li>
-          <li id="try02-line2">y = "<input type="text" id="try02-input2" size="12" class="input-box">"</li>
+          <li id="try02-line2">y = "<input type="text" id="try02-input2" size="12" class="input-box"><label for="try02-input2">"</label></li>
         </ul>
         <ul>
           <li class="lineNo">3</li>
@@ -254,8 +254,9 @@ function try02(){
     <div class = "highlight-yellow">
       <h2>Part 2 Python Data Types</h1><br>
       <p>Variables can store data of different data types. Python has some built-in data types by default:</p><br>
-      <div class="code-box" style="padding-left:10px">
+      <div class="code-box">
         <table>
+          <tr><th>Type</th><th>Data Types</th></tr>
           <tr><td>Numeric data types:</td><td>int, float, complex</td></tr>
           <tr><td>String data types:</td><td>str</td></tr>
           <tr><td>Sequence types:</td><td>tdst, tuple, range</td></tr>
@@ -266,8 +267,72 @@ function try02(){
         </table>
       </div>
     </div><br>
-
+    <h2>2.1 Numeric Data Types</h2><br>
+    <p>Python supports three different numeric data types:</p><br>
+    <div class="code-box">
+      <table>
+        <tr><th>Type</th><th>Description</th></tr>
+        <tr><td>int</td><td>Integers, positive or negative, without decimals, of unlimited length</td></tr>
+        <tr><td>float</td><td>Float, positive or negative, containing one or more decimals</td></tr>
+        <tr><td>complex</td><td>Complex numbers, written with a "j" as the imaginary part</td></tr>
+      </table>
+    </div><br>
+    <div class="highlight-blue">
+      <h2>Examples</h2><br>
+      <div class="code-box">
+        <ul>
+          <li class="lineNo">1</li>
+          <li>x = 1 <span style="color:grey"># int</span></li>
+        </ul>
+        <ul>
+          <li class="lineNo">2</li>
+          <li>y = 2.8 <span style="color:grey"># float</span></li>
+        </ul>
+        <ul>
+          <li class="lineNo">3</li>
+          <li>z = 1j <span style="color:grey"># complex</span></li>
+        </ul>
+      </div>
   </div>
+  
+  <br><h2>2.2 String Data Type</h2><br>
+  <p>Strings are used to store text. Strings are surrounded by either single quotation marks, or double quotation marks.</p><br>
+  <div class="highlight-blue">
+    <h2>Examples</h2><br>
+    <div class="code-box">
+      <ul>
+        <li class="lineNo">1</li>
+        <li>x = "Hello World!" <span style="color:grey"># str</span></li>
+      </ul>
+    </div>
+  </div><br>
+
+  <h2>2.3 Sequence Data Types</h2><br>
+  <p>Python has three built-in sequence data types:</p><br>
+  <div class="code-box">
+    <table>
+      <tr><th>Type</th><th>Description</th></tr>
+      <tr><td>list</td><td>List is a collection which is ordered and changeable. Allows duplicate members.</td></tr>
+      <tr><td>tuple</td><td>Tuple is a collection which is ordered and unchangeable. Allows duplicate members.</td></tr>
+      <tr><td>range</td><td>Range is a collection which is ordered and unchangeable. Does not allow duplicate members.</td></tr>
+    </table>
+  </div><br>
+  <div class="highlight-blue">
+    <h2>Examples</h2><br>
+    <div class="code-box">
+      <ul>
+        <li class="lineNo">1</li>
+        <li>x = ["apple", "banana", "cherry"] <span style="color:grey"># list</span></li>
+      </ul>
+      <ul>
+        <li class="lineNo">2</li>
+        <li>y = ("apple", "banana", "cherry") <span style="color:grey"># tuple</span></li>
+      </ul>
+      <ul>
+        <li class="lineNo">3</li>
+        <li>z = range(6) <span style="color:grey"># range</span></li>
+      </ul>
+    </div>
 
 </body>
 
