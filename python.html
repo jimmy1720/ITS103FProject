@@ -25,9 +25,11 @@
     </li>
   </ul>
   <script>
+    // toggle "try it!" sections to be displayed or hidden
     function toggle(element) {
       document.getElementById(element).classList.toggle("show");
     }
+    // Try 01a (Toggle indentation)
     function try01a() {
       var checkBox = document.getElementById("try01a-chkbox");
       if (checkBox.checked == true) {
@@ -40,6 +42,7 @@
         document.getElementById("try01a-result").innerHTML = "Hello World!";
       }
     }
+    // Try 01a (Toggle extra indentation)
     function try01b() {
       var checkBox = document.getElementById("try01b-chkbox");
       if (checkBox.checked == true) {
@@ -57,6 +60,7 @@
           "inline-block";
       }
     }
+    // Try 02 (Check if user input is correct)
     function try02() {
       var input1 = document.getElementById("try02-input1").value;
       var input2 = document.getElementById("try02-input2").value;
@@ -367,43 +371,39 @@
         <h2>Part 2 Python Data Types</h2>
         <br />
         <p>
-          Variables can store data of different data types. Python has some
-          built-in data types by default:
+          Variables can store data of different data types. Here are some basic
+          data types that Python has by default:
         </p>
         <br />
         <div class="code-box">
           <table>
             <tr>
-              <th>Type</th>
+              <th>Category</th>
               <th>Data Types</th>
             </tr>
             <tr>
-              <td>Numeric data types:</td>
+              <td>Numeric types:</td>
               <td>int, float, complex</td>
-            </tr>
-            <tr>
-              <td>String data types:</td>
-              <td>str</td>
-            </tr>
-            <tr>
-              <td>Sequence types:</td>
-              <td>tdst, tuple, range</td>
-            </tr>
-            <tr>
-              <td>Binary types:</td>
-              <td>bytes, bytearray, memoryview</td>
-            </tr>
-            <tr>
-              <td>Mapping data type:</td>
-              <td>dict</td>
             </tr>
             <tr>
               <td>Boolean type:</td>
               <td>bool</td>
             </tr>
             <tr>
-              <td>Set data types:</td>
-              <td>set, frozenset</td>
+              <td>Text type:</td>
+              <td>str</td>
+            </tr>
+            <tr>
+              <td>Sequence types:</td>
+              <td>list, tuple, range</td>
+            </tr>
+            <tr>
+              <td>Mapping data type:</td>
+              <td>dict</td>
+            </tr>
+            <tr>
+              <td>Set type:</td>
+              <td>set</td>
             </tr>
           </table>
         </div>
@@ -478,7 +478,27 @@
       </div>
       <br />
 
-      <h2>2.3 Sequence Data Types</h2>
+      <h2>2.3 Boolean Data Type</h2>
+      <br />
+      <p>Boolean represents one of two values: True or False.</p>
+      <br />
+      <div class="highlight-blue">
+        <h2>Examples</h2>
+        <br />
+        <div class="code-box">
+          <ul>
+            <li class="lineNo">1</li>
+            <li>x = True <span style="color: grey"># bool</span></li>
+          </ul>
+          <ul>
+            <li class="lineNo">2</li>
+            <li>y = False <span style="color: grey"># bool</span></li>
+          </ul>
+        </div>
+      </div>
+      <br />
+
+      <h2>2.4 Sequence Data Types</h2>
       <br />
       <p>Python has three built-in sequence data types:</p>
       <br />
@@ -537,39 +557,128 @@
         </div>
       </div>
       <br />
-      
-      <h2>2.4 Binary Data Types</h2>
+
+      <h2>2.5 Mapping Data Type</h2>
       <br />
-      <p>Python has three built-in binary data types:</p>
+      <p>
+        Python has one built-in mapping data type, which is dictionary.<br />
+        Dictionaries are used to store data values in {key:value} pairs.
+      </p>
+      <br />
+      <div class="highlight-blue">
+        <h2>Examples</h2>
+        <br />
+        <div class="code-box">
+          <ul>
+            <li class="lineNo">1</li>
+            <li>
+              x = {"a" : 10, "b" : 20, "c" : 30}
+              <span style="color: grey"># dict</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <br />
+
+      <h2>2.6 Set Data Type</h2>
+      <br />
+      <p>Sets are used to store multiple items in a single variable.</p>
+      <br />
+      <div class="highlight-blue">
+        <h2>Examples</h2>
+        <br />
+        <div class="code-box">
+          <ul>
+            <li class="lineNo">1</li>
+            <li>
+              x = {"apple", "banana", "cherry"}
+              <span style="color: grey"># set</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <br />
+
+      <h2>2.7 Mutable and Immutable Data Types</h2>
+      <br />
+      <p>
+        In Python, data types are divided into two categories: mutable and
+        immutable.<br />
+        Immutable data types are data types that cannot be changed after they
+        are created.<br />
+        While mutable data types are the opposite: They can be changed after
+        they are created.
+      </p>
       <br />
       <div class="code-box">
         <table>
           <tr>
-            <th>Type</th>
-            <th>Description</th>
+            <th>Mutable Data Types</th>
           </tr>
           <tr>
-            <td>bytes</td>
-            <td>
-              Bytes is a collection which is ordered and changeable. Allows
-              duplicate members.
-            </td>
+            <td>list</td>
           </tr>
           <tr>
-            <td>bytearray</td>
-            <td>
-              Bytearray is a collection which is ordered and changeable. Allows
-              duplicate members.
-            </td>
+            <td>dictionary</td>
           </tr>
           <tr>
-            <td>memoryview</td>
-            <td>
-              Memoryview is a collection which is ordered and changeable. Allows
-              duplicate members.
-            </td>
+            <td>set</td>
           </tr>
         </table>
+      </div>
+      <br />
+      <div class="code-box">
+        <table>
+          <tr>
+            <th>Immutable Data Types</th>
+          </tr>
+          <tr>
+            <td>int</td>
+          </tr>
+          <tr>
+            <td>float</td>
+          </tr>
+          <tr>
+            <td>complex</td>
+          </tr>
+          <tr>
+            <td>bool</td>
+          </tr>
+          <tr>
+            <td>string</td>
+          </tr>
+          <tr>
+            <td>tuple</td>
+          </tr>
+          <tr>
+            <td>range</td>
+          </tr>
+          <tr>
+            <td>frozenset</td>
+          </tr>
+        </table>
+      </div>
+      
+
+      <br />
+      <p>End of Part 2.</p>
+      <br />
+
+      <!--Link to Quiz-->
+      <div class="center-btn">
+        <button
+          class="trybtn"
+          style="margin: auto"
+          onclick="window.location.href='python_quiz.html'"
+        >
+          Quiz yourself on knowledges u have learned!
+        </button>
+      </div>
+      <br /><br />
+      <p style="color: grey; text-align: center">
+        Some of the contents are referenced from W3Schools.
+      </p>
+      <br /><br /><br /><br />
     </div>
   </body>
 </html>

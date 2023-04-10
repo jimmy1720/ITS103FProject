@@ -1,34 +1,187 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="menu.css">
-  <meta charset="utf-8">
-<title>Python Quiz</title>
-</head>
-<ul>
-<li><a href = "main.html">Home</a></li>
-<li>
-<a href = "#"> Java</a>
-<ul class = "dropdown">
-<li><a href = "java.html">Tutorial</a></li>
-<li><a href = "java_quiz.html">Quiz</a></li>
+  <head>
+    <link rel="stylesheet" href="menu.css" />
+    <link rel="stylesheet" href="python.css" />
+    <meta charset="utf-8" />
+    <title>Python</title>
+  </head>
+  <ul>
+    <li><a href="main.html">Home</a></li>
+    <li>
+      <a href="#"> Java</a>
+      <ul class="dropdown">
+        <li><a href="java.html">Tutorial</a></li>
+        <li><a href="java_quiz.html">Quiz</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#"> Python</a>
+      <ul class="dropdown">
+        <li><a href="python.html">Tutorial</a></li>
+        <li><a href="python_quiz.html">Quiz</a></li>
+      </ul>
+    </li>
+  </ul>
 
-</ul>
-</li>
+  <script>
+    var markcount = 0, count = 0;
+var questionSet = []
+var AnswerSet = []
 
-<li>
-<a href = "#"> Python</a>
-<ul class = "dropdown">
-<li><a href = "python.html">Tutorial</a></li>
-<li><a href = "python_quiz.html">Quiz</a></li>
-</ul>
-</li>
+// Define Questions and Answers
+// Question 1
+questionSet.push("<h2>What is the output of the following Python code?</h2><br />"+
+                 "<div class=\"code-box\">"+
+                 "<ul><li class=\"lineNo\">1</li><li>&nbsp;a = 10</li></ul>"+ 
+                 "<ul><li class=\"lineNo\">2</li><li>&nbsp;b = 20</li></ul>"+
+                 "<ul><li class=\"lineNo\">3</li><li>&nbsp;a = a + b</li></ul>"+
+                 "<ul><li class=\"lineNo\">4</li><li>&nbsp;print(a)</li></ul></div>");
+AnswerSet.push(["30", "20", "10", "40"]);
+// Question 2
+questionSet.push("<h2>Define a variable called age and assign 20 in integer format</h2>");
+AnswerSet.push(["age = 20", "age = '20'", "age = 20.0", "age = '20.0'"]);
+// Question 3
+questionSet.push("<h2>What is the data type of the following variable 'x'?</h2><br />"+
+                 "<div class=\"code-box\"><ul><li class=\"lineNo\">1</li><li>&nbsp;x = (1, 2, 3)</li></ul></div>");
+AnswerSet.push(["tuple", "list", "dictionary", "set"]);
+// Question 4
+questionSet.push("<h2>Which of the following data types is mutable?</h2>");
+AnswerSet.push(["list", "tuple", "string", "integer"]);
+// Question 5
+questionSet.push("<h2>What is the output of the following Python code?</h2><br />"+
+                 "<div class=\"code-box\">"+
+                 "<ul><li class=\"lineNo\">1</li><li>&nbsp;a = 5</li></ul>"+
+                 "<ul><li class=\"lineNo\">2</li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b = 20</li></ul>"+
+                 "<ul><li class=\"lineNo\">3</li><li>&nbsp;a = b - a</li></ul>"+
+                 "<ul><li class=\"lineNo\">4</li><li>&nbsp;print(a)</li></ul></div>");
+AnswerSet.push(["Syntax Error", "15", "5", "10"]);
 
-<body bgcolor = "#b1b1b1">
-<br><br><br><br><br><br>
+// Display questions by random order without repeating
+var QuestionDisplayed = 0;
+function nextQuestion() {
+  if (count < 5) {
+    var random = Math.floor(Math.random() * i);
+    var correctAnswer = AnswerSet[random][0];
+    document.getElementById("question").innerHTML = questionSet[random];
+    // Display answers by random order
+    var answer = AnswerSet[random];
+    QuestionDisplayed = correctAnswer;
+    var randomAnswer = [];
+    for (var j = 0; j < 4; j++) {
+      var random2 = Math.floor(Math.random() * answer.length);
+      randomAnswer.push(answer[random2]);
+      answer.splice(random2, 1);
+    }
+    document.getElementById("Answer1").innerHTML = randomAnswer[0];
+    document.getElementById("Answer2").innerHTML = randomAnswer[1];
+    document.getElementById("Answer3").innerHTML = randomAnswer[2];
+    document.getElementById("Answer4").innerHTML = randomAnswer[3];
 
-</body>
+    questionSet.splice(random, 1);
+    AnswerSet.splice(random, 1);
+    i--;
+    count++;
+  } else {
+    document.getElementById("question").innerHTML = "You have completed the quiz!<br />Your score is " + markcount + " out of " + count;
+    document.getElementById("answerBtns").style.display = "none";
+    document.getElementById("nextBtn").style.display = "none";
+  } 
+}
 
+// Check answer
+function checkAnswer(answer) {
+  var checkAns = document.getElementById("Answer" + answer).innerHTML;
+  console.log(checkAns)
+  if (checkAns ==  QuestionDisplayed) {
+    document.getElementById("result").innerHTML = "<br/>Correct!";
+    markcount++;
+    
+  } else {
+    document.getElementById("result").innerHTML = "<br/>Incorrect!";
+  }
+  [1,2,3,4].forEach(disableBtns)
+  document.getElementById("nextBtn").classList.toggle("show");
+}
+
+function disableBtns(item){
+  const btn = document.getElementById("choice" + item)
+  btn.disabled = true;
+}
+
+function enableBtns(item){
+  const btn = document.getElementById("choice" + item)
+  btn.disabled = false;
+}
+
+function next(){
+  document.getElementById("result").innerHTML = "";
+  [1,2,3,4].forEach(enableBtns)
+  document.getElementById("nextBtn").classList.toggle("show");
+  nextQuestion();
+}
+
+
+    
+  </script>
+
+  <body bgcolor = "#b1b1b1">
+    <div class="container">
+      <br /><br />
+      <h1>
+        <span style="background-color: #001440; 
+                     color: #f1f1f1; 
+                     padding: 0 20px">
+          Python Quiz
+        </span>
+      </h1>
+      <br /><br />
+      <div class="quizContainer">
+        <div class="quizQuestion">
+          <div id="question"></div><br/><br/>
+        </div>
+        <div class="quizBtns" id="answerBtns">
+          <table>
+            <tr>
+              <td width="50%" style="padding-right:10px;">
+                <button id="choice1" class="quiz-btn" type="button" onclick="checkAnswer(1)">A. <span id="Answer1"></span></button>
+              </td>
+              <td width="50%" style="padding-left:10px;">
+                <button id="choice2" class="quiz-btn" type="button" onclick="checkAnswer(3)">C. <span id="Answer3"></span></button>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-top:15px;padding-right:10px;">
+                <button id="choice3" class="quiz-btn" type="button" onclick="checkAnswer(2)">B. <span id="Answer2"></span></button>
+              </td>
+              <td style="padding-top:15px;padding-left:10px;">
+                <button id="choice4" class="quiz-btn" type="button" onclick="checkAnswer(4)">D. <span id="Answer4"></span></button>
+              </td>
+          </table>
+        </div>
+        <div class="quizResult">
+          <p id="result"></p>
+        </div>
+        <div class="quizBtns" id="nextBtn">
+          <br/>
+          <table>
+            <tr>
+              <td>
+                <button id="nextButton" class="quiz-btn" type="button" onclick="next()">Next</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </body>
+  <script>
+    // Call nextQuestion function
+    var i = questionSet.length;
+    nextQuestion();
+  </script>
 
 
 </html>
