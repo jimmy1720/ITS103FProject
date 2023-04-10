@@ -36,18 +36,18 @@ var questionSet = ["Which datatype is using single colon to create variable?",
 				  "What is the output in the following code<br><br>public class Person {<br><br>&nbsp&nbsp public String name = \"Susan\"<br><br>public Person(){<br><br>&nbsp&nbsp this.name = name;<br>}<br><br>public void setName(String newName) {<br>&nbsp&nbsp this.name = newName;<br>}<br><br>public static void main(String[] args){<br>&nbsp&nbsp Person p1 = new Person();<br>&nbsp&nbsp p1.setName(\"Derek\");<br>&nbsp&nbsp p1.setName(\"Zoo\");<br>&nbsp&nbsp System.out.println(p1.name);<br>}<br>}",
 				  "Write the import statement for scanner",
 				  "Will the following method result in a syntax error?(Answer T for true and F for false)<br>&nbsp&nbsp public void aMethod();",
-				  "Create a varaible called age and assign 20",
-				  "How many elements can "];
+				  "Create a varaible called age and assign 20 in integer format",
+				  "int a = 10;<br>String b = \"10\"<br> is a == b?(Answer T for true and F for false)"];
 var answerSet = ["char","Zoo","import java.util.Scanner;","T","int age = 20;","F"]
 var questionNo = 1;
 //An array to store the answers of the surffled questionSet
 var answerSet2 = [];
 function showQuestion(){
 	//Random from max to min number by using for loop
-	for(var i = 5;i>=1;i--){
+	for(var i = 6;i>1;i--){
 	  var randomNumber = Math.floor(Math.random() * i);
 	  answerSet2.push(answerSet[randomNumber]);
-	  document.write("Question " + questionNo + ":" + questionSet[randomNumber]+ "<br><br><br><br><br><br>" );
+	  document.write("Question " + questionNo + ":<br>" + questionSet[randomNumber]+ "<br><br><br><br><br><br>" );
 	  questionNo++;
 	  //Remove the question and answers that selected by randomNumber
 	  questionSet.splice(randomNumber,1);

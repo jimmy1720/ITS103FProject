@@ -52,9 +52,9 @@ function StringOutput(){
 
 </script>
 <body  bgcolor = "#b1b1b1">
-<br><br><br><br><br><br>
-<h1>Part 1. Java Variable</h1><br><br><br><br><br><br>
-<h2>In Java, there are different types of variables</h2><br>
+<br><br><br>
+<h1>Part 1. Java Variable</h1><br><br>
+<h2>In Java, there are different types of variables</h2><br><br>
 <table id = "java">
 <tr>
 <th>Type</th>
@@ -82,7 +82,7 @@ function StringOutput(){
 </tr>
 </table>
 <br><br>
-<p>There is one of the example of how to printing your name in String format</p><br>
+<p>There is one of the example of how to printing your name in String format</p><br><br>
 <div>
 String surname = "Chan";<br>
 String firstname = "Tai Man";<br>
@@ -94,12 +94,12 @@ System.out.println(surname + firstname);
 <br><br><br><p>Same with integers but remember we don't use <b>double quotes</b> on it otherwise its an incompatible types due to <b>String cannot be converted to int</b></p>
  	
 
+<br><br><hr><br><br>
 
 
-<hr><br>
-<h1>Part 2. Logical operator</h1><br>
+<h1>Part 2. Logical operator</h1><br><br>
 <p>A logical operator is a symbol or word used to connect two or more expressions such that the value of the compound expression produced depends only on that of the original expressions and on the meaning of the operator. 
-<br><br>Common logical operators include <b>AND, OR, and NOT.</b></p>
+<br><br>Common logical operators include <b style = "color:red">AND, OR, and NOT.</b></p>
 <br><br><p>There is one common way to show logical relationships is shown as Truth Tables</p>
 
 <table style = "width:50%" id = "java">
@@ -183,6 +183,42 @@ System.out.println(surname + firstname);
 <td><p id = "ans10" onclick = "document.getElementById('ans10').innerHTML='false';">Check answer</p></td>
 </tr>
 </table>
+
+<br><br><hr><br><br>
+
+<br><br> <h1>Part 3. Java Classes and Objects</h1><br><br>
+
+<h2>3.1 Create a Class</h2><br><br>
+
+<p>To create a class, use the keyword <b style = "color:red">class</b></p><br><br>
+<p>Create a class named "Main" with a variable y:</p>
+
+<div><p>public class  <b style = "color:red">Main </b>{
+<p>int x = <b style = "color:red">5</b>;<br></p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}
+
+</div>
+
+
+
+<br><br><h2> 3.2 Create an Object</h2><br><br>	
+
+<p>In Java, an object is created from a class. We have already created the class named <b style = "color:red">Main </b>, so now we can use this to create objects.
+
+<br><br>To create an object of <b style = "color:red">Main </b>, specify the class name, followed by the object name, and use the keyword <b style = "color:red">new</b>:</p>
+
+<div>
+public class Main{<br>
+&nbsp;int x = 5;<br><br>
+public static void main(String[] args){<br>
+&nbsp;&nbsp;Main myObj = <b style = "color:red">new Main </b>();<br>
+&nbsp;&nbsp;System.out.println(myObj.x);
+<br>&nbsp;}
+<br>}
+</div>
+
 
 
 <p style = "position: center;
