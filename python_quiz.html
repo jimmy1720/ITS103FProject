@@ -126,9 +126,9 @@
     }
 
     function next() {
+      document.getElementById("nextBtn").classList.toggle("show");
       document.getElementById("result").innerHTML = "";
       [1, 2, 3, 4].forEach(enableBtns);
-      document.getElementById("nextBtn").classList.toggle("show");
       nextQuestion();
     }
   </script>
