@@ -94,10 +94,8 @@
         count++;
       } else {
         document.getElementById("question").innerHTML =
-          "You have completed the quiz!<br />Your score is " +
-          markcount +
-          " out of " +
-          count;
+          "<div style=\"text-align:center;\"><h2>You have completed the quiz!<br />Your score is:</h2><br/><h1 style=\"font-size:60px;\"" +
+          markcount + " / " + count + "</h1></div>";
         document.getElementById("answerBtns").style.display = "none";
         document.getElementById("nextBtn").style.display = "none";
       }
@@ -199,26 +197,11 @@
             </tr>
           </table>
         </div>
-        <div class="quizResult">
-          <p id="result"></p>
-        </div>
-        <div class="quizBtns" id="nextBtn">
-          <br />
-          <table>
-            <tr>
-              <td>
-                <button
-                  id="nextButton"
-                  class="quiz-btn"
-                  type="button"
-                  onclick="next()"
-                >
-                  Next
-                </button>
-              </td>
-            </tr>
-          </table>
-        </div>
+        <div class="quizResult" id="result" style="text-align:center"></div>
+      </div>
+      <br/>
+      <div class="center-btn2" id="nextBtn">
+        <button id="nextButton" class="quiz-btn" type="button" onclick="next()">Next Question</button>
       </div>
     </div>
   </body>

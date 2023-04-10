@@ -129,8 +129,6 @@ h1 {
 }
 
 .quizContainer{
-    width:100%;
-    max-width:820px;
     margin:auto;
     padding:20px;
     background-color:#ddbc73;
@@ -143,7 +141,6 @@ h1 {
     text-align:center;
 }
 .quiz-btn{
-    padding:10px 20px;
     color:#001440;
     transition: 0.3s;
     width:100%;
@@ -155,7 +152,7 @@ h1 {
     border-color:#f1f1f1;
 }
 .quiz-btn:disabled{
-    background-color: #f1f1f1;
+    background-color: #b1b1b1;
     color:#001440;
     cursor:not-allowed;
 }
@@ -165,5 +162,9 @@ h1 {
 }
 #nextBtn.show{
     visibility: visible;
-    height:auto;
+}
+.center-btn2{
+    display:block;
+    text-align:center;
+    margin:auto;
 }
