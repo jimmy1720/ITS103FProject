@@ -37,12 +37,22 @@
   margin: 4px 2px;
   cursor: pointer;
 }
-
+.button2 {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #555555;
+  color: black;
+}
 </style>
 <script>
 var surname = "Chan "
 var firstname = "Tai Man"
 var showStringOutput =　StringOutput;
+var printObject = Object;
 
 function StringOutput(){
 	alert("First line output: "+surname);
@@ -50,6 +60,10 @@ function StringOutput(){
 	alert("Third line output: "+(surname + firstname));
 }
 
+function Object(){
+	var value = document.getElementById("output");
+	value.innerHTML = "Result: 5";
+}
 </script>
 <body  bgcolor = "#b1b1b1">
 <br><br><br>
@@ -91,7 +105,7 @@ System.out.println(firstname);<br>
 System.out.println(surname + firstname);
 </div>
 <br><br><br><p><button class = "button" onclick = "showStringOutput()">Click the button</button>and the alert message will show you the sample output</p>
-<br><br><br><p>Same with integers but remember we don't use <b>double quotes</b> on it otherwise its an incompatible types due to <b>String cannot be converted to int</b></p>
+<br><br><br><p>Same with integers but remember we don't use <b style = "color:red">double quotes</b> on it otherwise its an incompatible types due to <b style = "color:red">String cannot be converted to int</b></p>
  	
 
 <br><br><hr><br><br>
@@ -192,6 +206,7 @@ System.out.println(surname + firstname);
 
 <p>To create a class, use the keyword <b style = "color:red">class</b></p><br><br>
 <p>Create a class named "Main" with a variable y:</p>
+<br><br>
 
 <div><p>public class  <b style = "color:red">Main </b>{
 <p>int x = <b style = "color:red">5</b>;<br></p>
@@ -208,6 +223,7 @@ System.out.println(surname + firstname);
 <p>In Java, an object is created from a class. We have already created the class named <b style = "color:red">Main </b>, so now we can use this to create objects.
 
 <br><br>To create an object of <b style = "color:red">Main </b>, specify the class name, followed by the object name, and use the keyword <b style = "color:red">new</b>:</p>
+<br><br>
 
 <div>
 public class Main{<br>
@@ -217,14 +233,23 @@ public static void main(String[] args){<br>
 &nbsp;&nbsp;System.out.println(myObj.x);
 <br>&nbsp;}
 <br>}
-</div>
+</div>		
+<br><br>
+<p id = "output"></p>
+<br><br><p><button class = "button2" onclick = "printObject()">Sample answer</button></p>
+
+<br><br><hr><br><br>
+
+<h1>Part 4. Getter and Setter</h1>
 
 
 
+<br><br>
 <p style = "position: center;
   bottom: 10px;
   border: 3px solid black;
   "><b>P.S. Some descriptions are referenced by W3School</b>
 </body>    
+
 
 </html>
