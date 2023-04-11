@@ -93,9 +93,9 @@
         i--;
         count++;
       } else {
+        console.log(markcount + " / " + count)
         document.getElementById("question").innerHTML =
-          "<div style=\"text-align:center;\"><h2>You have completed the quiz!<br />Your score is:</h2><br/><h1 style=\"font-size:60px;\"" +
-          markcount + " / " + count + "</h1></div>";
+          "<div style=\"text-align:center;\"><h2>You have completed the quiz!<br />Your score is:</h2><br/><h1 style=\"font-size:60px;\">" + markcount + " / " + count + "</h1></div>";
         document.getElementById("answerBtns").style.display = "none";
         document.getElementById("nextBtn").style.display = "none";
       }
