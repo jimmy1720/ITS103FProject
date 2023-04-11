@@ -103,18 +103,23 @@
 
     // Check answer
     function checkAnswer(answer) {
+      // Get answer from button
       var checkAns = document.getElementById("Answer" + answer).innerHTML;
-      console.log(checkAns);
       if (checkAns == QuestionDisplayed) {
+        // Correct answer
         document.getElementById("result").innerHTML = "<br/>Correct!";
         markcount++;
       } else {
+        // Incorrect answer
         document.getElementById("result").innerHTML = "<br/>Incorrect!";
       }
+      // Disable buttons after answer is selected
       [1, 2, 3, 4].forEach(disableBtns);
+      // Show next button
       document.getElementById("nextBtn").classList.toggle("show");
     }
 
+    
     function disableBtns(item) {
       const btn = document.getElementById("choice" + item);
       btn.disabled = true;
