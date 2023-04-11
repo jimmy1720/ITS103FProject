@@ -37,7 +37,7 @@ var questionSet = ["Which datatype is using single colon to create variable?",
 				  "Write the import statement for scanner",
 				  "Will the following method result in a syntax error?(Answer T for true and F for false)<br>&nbsp&nbsp public void aMethod();",
 				  "Create a varaible called age and assign 20 in integer format",
-				  "int a = 10;<br>String b = \"10\"<br> is a == b?(Answer T for true and F for false)"];
+				  "int a = 10;<br>String b = \"10\";<br> is a == b?(Answer T for true and F for false)"];
 var answerSet = ["char","Zoo","import java.util.Scanner;","T","int age = 20;","F"]
 var questionNo = 1;
 //An array to store the answers of the surffled questionSet
@@ -63,7 +63,9 @@ function countAnswer(){
 		correctCount += 1;
 	  }
 	}
-	alert("You have answered " +correctCount + " correctly");
+	if(confirm("You have answered " +correctCount + " correct, will you want to check the answer?"))
+		showAnswer();
+	//alert("You have answered " +correctCount + " correctly");
 }
 
 function showAnswer(){
@@ -74,8 +76,8 @@ function showAnswer(){
 showQuestion();
 </script>
 <body style = "font-size:15px">
-<br><br><br><br><br><br>
-Input your answer here<b style= "font-size:20px">(Check the answer by clicking the caution image)</b><br><br>
+<br><br>
+
 <table border = "1">
 <tr>
 <td>Question 1</td>
@@ -100,10 +102,6 @@ Input your answer here<b style= "font-size:20px">(Check the answer by clicking t
 <tr>
 <td>Submit your answers</td>
 <td><input type = "button" width = "100%" value = "Submit" onClick = "countAnswer()"></td>
-</tr>
-<tr>
-<td colspan = "2"><img src = "caution.png" onClick = "showAnswer()" width = "100%"></td>
-
 </tr>
 </table>
 </body>
